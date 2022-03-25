@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 *,
 *::before,
@@ -28,7 +28,7 @@
     grid-area: header;
     position: relative;
     top: 250%;
-    right: 16%;
+    right: 15.5%; /*sin border radius en form poner con 18%*/
 }
 
 .main {
@@ -38,9 +38,11 @@
 .footer {
     grid-area: footer;
     position: absolute;
-    top: 88%;
+    top: 91%;
     right: 41%;
     text-align: center;
+    
+    font-weight: 300;
     
 }
 
@@ -85,6 +87,7 @@ input, button {
     padding: 3rem;
     box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, .15);
     font-size: 1.125rem;
+    border-radius: 1.5rem; /*revisar*/
 
 }
 
