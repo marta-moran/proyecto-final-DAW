@@ -1,0 +1,66 @@
+.menu, .main {
+    font-size: 0.9rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+:root {
+    --primary-color: #4a47a3;
+    --text-color: #2a2b2c;
+    --secondary-color: #c9c8e3b7;
+}
+
+.grid {
+    grid-template-areas:    "header"
+                            "seccion"
+                            "footer";
+}
+
+.menu {
+    margin: 2rem 0 2rem 0;
+   
+}
+
+
+.menu > span {
+    padding: 0.6rem;
+    background-color: var(--secondary-color);
+    border-radius: 2rem;
+}
+
+.footer {
+    position: absolute;
+    top: 91%;
+    right: 42%;
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 300;    
+}
+
+main {
+    grid-area: main;
+    
+}
+
+
+.seccion {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 1000px;
+    max-width: 90%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    grid-area: seccion;
+    /*grid: auto /1fr 1fr ;
+    column-gap: 1rem;
+    row-gap: 2rem;*/
+    padding: 3rem;
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, .15);
+    font-size: 1.125rem;
+    border-radius: 1.5rem; /*revisar*/
+
+}

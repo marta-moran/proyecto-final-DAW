@@ -9,8 +9,8 @@
 .header {
     grid-area: header;
     position: relative;
-    top: 250%;
-    right: 15.5%; /*sin border radius en form poner con 18%*/
+    top: 130%;
+    right: 24%; /*sin border radius en form poner con 18%*/
 }
 
 .main {
@@ -27,7 +27,6 @@
     font-weight: 300;
     
 }
-
 
 .login-form {
     position: absolute;
@@ -49,11 +48,10 @@
 }
 
 .enviar {
-    grid-column: span 1;
-}
-
-.registro {
     grid-column: span 2;
 }
 
-
+.texto {
+    grid-column: span 2;
+    font-weight: 600;
+}
