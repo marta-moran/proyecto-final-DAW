@@ -10,7 +10,7 @@
 
 .header {
     grid-area: header;
-    margin: 150px 0 0 0px;
+    margin-top: 150px;
     text-align: center;
    /* position: relative;
     top: 310%; /*300*/
@@ -28,13 +28,9 @@
 
 .footer {
     grid-area: footer;
-    position: absolute;
-    top: 91%;
-    right: 42%;
     text-align: center;
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: 300;
-    
 }
 
 
@@ -68,13 +64,13 @@
 /*MÓVIL*/
 @media screen and (max-width: 480px) {
 
-
     .header {
-       font-size: 1.25rem;
-        top: 260%; /*300*/
-        right: 4%; /*sin border radius en form poner con 18%*/
+       font-size: 1.2rem;
+       margin-left: 17px;
+       margin-top: 130px;
     }
-    
+
+
     .flex-container {
         display: flex;
     }
@@ -88,16 +84,6 @@
     }
 
     .footer {
-        display: flex;
-        
+        margin-top: 40px;
     }
-
-    .footer > section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: max-content;
-        
-    }
-
 }
