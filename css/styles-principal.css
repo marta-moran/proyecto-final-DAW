@@ -1,14 +1,17 @@
-.menu, .main {
-    font-size: 0.9rem;
+:root {
+    --primary-color: #4a47a3;
+    --text-color: #2a2b2c;
+    --secondary-color: #c9c8e3b7;
 }
 
 h1 {
     font-size: 3rem;
 }
-:root {
-    --primary-color: #4a47a3;
-    --text-color: #2a2b2c;
-    --secondary-color: #c9c8e3b7;
+
+ul li{
+    list-style: none;
+    margin: 1.1rem;
+
 }
 
 .grid {
@@ -17,29 +20,51 @@ h1 {
                             "footer";
 }
 
+.main {
+    margin: 2.5rem 0 1rem 0;
+}
 .menu {
-    margin: 2rem 0 2rem 0;
+    margin-top: 1.2rem
+}
+
+
+.encabezado {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
    
 }
 
-
-.menu > span {
-    padding: 0.6rem;
-    background-color: var(--secondary-color);
-    border-radius: 2rem;
+.menu {
+    font-size: 1.25rem;
 }
 
-.footer {
-    position: absolute;
-    top: 91%;
-    right: 42%;
-    text-align: center;
-    font-size: .9rem;
-    font-weight: 300;    
+
+.menu > a, .menu > a:visited {
+    padding: .8rem;
+    text-decoration: none;
+    color: #2a2b2c;
+    
+   /*background-color:  var(--secondary-color);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, .15);
+    border-radius: 2rem;*/
 }
 
-main {
-    grid-area: main;
+a:hover {
+    border-style: none none solid none;
+    border-color: var(--primary-color);
+}
+
+
+
+.main {
+    font-size: 1.1rem;
+}
+
+
+.main {
+    grid-area: seccion;
     
 }
 
@@ -49,7 +74,7 @@ main {
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 1000px;
+    min-width: 1200px;
     max-width: 90%;
     background-color: #fff;
     display: flex;
@@ -62,5 +87,39 @@ main {
     box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, .15);
     font-size: 1.125rem;
     border-radius: 1.5rem; /*revisar*/
+    
+    
 
 }
+
+ul > li:hover {
+   color: var(--primary-color);
+   font-weight: 600;
+   cursor: pointer;
+
+}
+
+.mapa-puntos {
+    display: flex;
+    flex-direction: row;
+}
+
+.puntos {
+    width: 50% ;
+}
+
+#map {
+    height: 300px;
+    width: 50%;
+
+    
+}
+
+/*.footer {
+    position: absolute;
+    top: 91%;
+    right: 42%;
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 300;    
+}*/

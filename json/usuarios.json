@@ -1,0 +1,23 @@
+[
+    {
+      "usuario": "martamoran",
+      "clave": "Hola1",
+      "nombre": "Marta Morán"
+    },
+    {
+        "usuario": "pabloo12",
+        "clave": "Adios1",
+        "nombre": "Pablo García"
+    },
+    {
+        "usuario": "sara205",
+        "clave": "gatoS1",
+        "nombre": "Sara Alonso"
+    },
+    {
+        "usuario": "josejuan",
+        "clave": "Gatitos1",
+        "nombre": "José Juan Muñoz"
+    }
+  
+  ]
