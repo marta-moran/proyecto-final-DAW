@@ -27,7 +27,7 @@ body {
     
 }
 
-abel {
+label {
     display: block;
 }
 
@@ -38,11 +38,11 @@ input, button {
     width: 100%;
 }
 
-:focus {
+/*:focus {
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(255, 210, 127, 0.897);
 }
-
+*/
 .input-label {
     font-weight: 500;
     margin-bottom: 0.25rem;
@@ -68,3 +68,4 @@ input, button {
     background-color: #ededf6;
     color: var(--text-color);
 }
+
