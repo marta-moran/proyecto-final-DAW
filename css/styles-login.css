@@ -3,8 +3,10 @@
     display: grid;
     grid-template-areas:    "header"
                             "form"
+                            "result"
                             "footer";
-    grid-template-rows: 200px 500px 200px;
+    grid-template-rows: 200px 423px 95px;
+    align-items: start;
                            
 }
 
@@ -61,28 +63,45 @@
     grid-column: span 2;
 }
 
+.result__error {
+    grid-area: result;
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgb(214, 70, 70);
+    font-weight: 600;
+}
+
 /*MÓVIL*/
 @media screen and (max-width: 480px) {
 
     .header {
        font-size: 1.2rem;
        margin-left: 17px;
-       margin-top: 130px;
+       margin-top: 40px;
     }
 
     .flex-container {
         display: flex;
+        align-items: center;
     }
     .grid-container {
         width: auto;
+        grid-template-rows: 80px 447px 63px;
+        align-items: start
     }
 
     .login-form {
         min-width: 87%;
         height: 50%;
+        transform: none;
+        top: 12%;
+        left: 5%;
+        
+        
     }
 
-    .footer {
-        margin-top: 40px;
+    .result__error {
+        text-align: center;       
+  
     }
 }

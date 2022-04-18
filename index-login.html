@@ -19,6 +19,7 @@
                     <h1>Protectora patitas</h1>
                 </header>
                 <main class="main">
+                    
                     <section>
                         <form class="login-form" v-on:submit.prevent>
                             <div class="registro">
@@ -27,7 +28,8 @@
                             </div>
                             <div class="registro">
                                 <label class="input-label">Clave</label>
-                                <input v-model="clave" type="password" class="input-text" placeholder="Your secret password">
+                                <input v-model="clave" type="password" class="input-text"
+                                    placeholder="Your secret password">
                             </div>
                             <div class="enviar">
                                 <button class="input-button" @click="registroUsuario">Registrarse</button>
@@ -40,7 +42,9 @@
                             </div>
                         </form>
                     </section>
+              
                 </main>
+                <div class="result__error" v-if="error">{{ error }}</div>
                 <footer class="footer">
                     <section>
                         <p>&#128151Desarrollado por Marta Morán&#x1F497</p>
@@ -53,6 +57,15 @@
     <script src="js/main.js"></script>
     <script>
         const mountedApp = app.mount("#app");
+
+        function preventEnter() {
+            document.addEventListener("keydown", (event) => {
+                if (event.key == "Enter") {
+                    event.preventDefault();
+                }
+            })
+        }
+        preventEnter();
     </script>
 </body>
 

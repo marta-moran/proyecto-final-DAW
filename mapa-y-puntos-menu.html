@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles-base.css">
+    <link rel="stylesheet" href="css/styles-principal.css">
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+   
+ 
+    <title>Protectora Patitas</title>
+</head>
+
+<body>
+
+    <div class="grid">
+
+
+        <section class="seccion">
+
+
+            <div class="encabezado">
+                <header class="titulo">
+                    <h1>¡Hola {{ nombreUsuario }}!</h1>
+                </header>
+
+                <nav class="menu">
+                   
+                    <a href="#">Home</a>
+                    <a href="#">Imprescindible</a>
+                    <a href="#">Contacto</a>
+                </nav>
+            </div>
+
+            <main class="main">
+
+                <section class="mapa-puntos">
+                    <div class="puntos">
+                        <ul>
+                            <li>📍C/Marx (invernadero de investigación)</li>
+                            <li>📍C/Marx (patio)</li>
+                            <li>📍C/Marx (ingenería química y <br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;tecnología de los alimentos)</li>
+                            <li>📍C/Francisco Tomás y Valiente (Sala Búho)</li>
+                            <li>📍C/Einstein (parking filosofía y letras)</li>
+                            <li>📍C/Erasmo de Rotterdam (cancha de voley)</li>
+                        </ul>
+                    </div>
+                    <br>
+
+                    <div id="map"></div>
+
+                </section>
+                <script src="/js/main.js"></script>
+                <script>
+                    const mountedApp = app.mount(".encabezado");
+                </script>
+            </main>
+        </section>
+
+        <!--<footer class="footer">
+                        <section>
+                            <p>&#128151Desarrollado por Marta Morán&#x1F497</p>
+                            <p>2022</p>
+                        </section>
+                    </footer>-->
+
+    </div>
+
+</body>
+
+</html>

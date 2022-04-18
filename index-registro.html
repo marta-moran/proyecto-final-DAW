@@ -7,51 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles-base.css">
     <link rel="stylesheet" href="css/styles-registro.css">
+    <script src="https://unpkg.com/vue@3"></script>
     <title>Protectora Patitas</title>
 </head>
-<body id="#body-registro">
 
+<body>
+    <div id="app">
         <div class="grid-container">
             <header class="header">
                 <h1>Protectora patitas</h1>
             </header>
             <main class="main">
                 <section>
-                    <form class="login-form">
+                    <form class="login-form" v-on:submit.prevent>
                         <div class="texto">
                             <p>¡Bienvenido/a! Gracias por querer formar parte de nuestra protectora. Por favor, rellena
                                 este formulario para poder empezar a usar la aplicación</p>
                         </div>
                         <div class="registro">
                             <label class="input-label">Nombre completo</label>
-                            <input type="text" class="input-text" placeholder="Your name">
+                            <input v-model="newName" type="text" class="input-text" placeholder="Your name">
                         </div>
                         <div class="registro">
                             <label class="input-label">Nombre de usuario</label>
-                            <input type="text" class="input-text" placeholder="Your username">
+                            <input v-model="newUserName" type="text" class="input-text" placeholder="Your username">
                         </div>
                         <div class="registro">
                             <label class="input-label">Clave</label>
-                            <input type="password" class="input-text" placeholder="Your secret password">
+                            <input v-model="newPass" type="text" class="input-text"
+                                placeholder="Your secret password">
                         </div>
                         <div class="registro">
                             <label class="input-label">Repite la clave</label>
-                            <input type="password" class="input-text" placeholder="Repeat your secret password">
+                            <input v-model="repeatNewPass" type="text" class="input-text" placeholder="Repeat your secret password">
                         </div>
 
 
                         <div class="enviar">
-                            <button class="input-button">Enviar</button>
+                            <button class="input-button" @click="validarUsuarioyClave">Enviar</button>
                             <!--Aqui se debería redirigir con vue al formulario de registro (window.onload)-->
                         </div>
-
-                        <!--<div class="enviar">
-                        <button class="input-button input-entrar">Entrar</button>
-                        Aqui se debería redirigir con vue a la página principal. Si encuentra al usuario 
-                        en la bd o en el mapa del localstorage te manda a la página principal-->
                     </form>
                 </section>
             </main>
+
+            <div class="result__error" v-if="error">{{ error }}</div>
+
             <footer class="footer">
                 <section>
                     <p>&#128151Desarrollado por Marta Morán&#x1F497</p>
@@ -60,6 +61,10 @@
             </footer>
         </div>
     </div>
+    <script src="js/main.js"></script>
+    <script>
+        const mountedApp = app.mount("#app");
+    </script>
 </body>
 
 </html>
